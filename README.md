@@ -1,9 +1,4 @@
-# Clone of google drive (backend)
-## Features:
-- User authentication.
-- Load files.
-- Upload files.
-- Browser between your file system.
+# Clone of instagram (backend)
 ## Technologies.
 - Typescript
 - Mongo
