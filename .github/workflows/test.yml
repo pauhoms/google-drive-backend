@@ -1,0 +1,22 @@
+name: test
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Docker containers
+        run: make run
+
+      - name: Wait to start service
+        run: sleep 30
+
+      - name: Lint
+        run: make lint
+
+      - name: Test
+        run: make test
+

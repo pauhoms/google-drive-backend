@@ -1,0 +1,9 @@
+services:
+  mongo.client:
+    factory:
+      class: ../mongo/MongoFactory
+      method: 'create'
+
+  controllers.shared.helth-check :
+    class: ../controllers/shared/HealthCheckController
+    arguments: ['@mongo.client']
