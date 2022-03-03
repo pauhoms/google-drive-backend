@@ -11,6 +11,9 @@ jobs:
       - name: Docker containers
         run: make run
 
+      - name: Wait to start service
+        run: sleep 30
+
       - name: Lint
         run: make lint
 
