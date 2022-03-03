@@ -2,7 +2,7 @@ import request from "supertest";
 
 import app from "../../../src/app/app";
 import { version } from "../../../src/app/routes/index";
-import MongoEnvironmentArranger from "./mongo/MongoEnvirommentArranger";
+import MongoEnvironmentArranger from "../../context/shared/infrastructure/persistance/MongoEnvirommentArranger";
 
 beforeAll((done) => {
   MongoEnvironmentArranger.arrange();

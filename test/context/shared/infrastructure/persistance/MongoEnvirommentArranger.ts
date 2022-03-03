@@ -1,4 +1,4 @@
-import MongoFactory from "../../../../src/app/mongo/MongoFactory";
+import MongoFactory from "../../../../../src/app/mongo/MongoFactory";
 
 class MongoEnvironmentArranger {
   public static async arrange(): Promise<void> {
