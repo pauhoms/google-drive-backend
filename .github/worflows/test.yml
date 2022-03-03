@@ -9,9 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Docker containers
-        run: |
-          make build
-          make run
+        run: make run
+
+      - name: Lint
+        run: make lint
 
       - name: Test
         run: make test
+
