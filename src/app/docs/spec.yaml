@@ -1,0 +1,30 @@
+openapi: 3.0.0
+info:
+  title: Instagram
+  version: 1
+
+servers:
+  - url: http://localhost:4000/api/v1
+    description: Local server
+
+paths:
+  /status:
+    get:
+      summary: Health check
+      tags:
+        - Shared
+      description: End point to return the status of the services
+      responses:
+        '200':
+          description: List with the status of each service 
+          content:
+            application/json:
+              schema: 
+                type: object
+                properties:
+                  mongo_status:
+                    type: string
+                    example: "ko"
+                  server_status:
+                    type: string
+                    example: "ok"
